@@ -1,6 +1,7 @@
 # archibos necesaris
 from GUI.ui_VentanaPrincipal import *
 # librerias
+from PySide6 import QtCore
 import sys
 
 
@@ -8,7 +9,8 @@ import sys
 class windowPrin(QMainWindow):
     def __init__(self, parent=None):
         QMainWindow.__init__(self, parent)
-        self.anchoBanda = Ui_MainWindow()
+        self.ventanaAnchoDeBanda = Ui_MainWindow()
+        self.setAttribute(QtCore.Qt.WA_TranslucentBackground) # para no visualiar QMainWindow 
     pass
 
 
@@ -18,4 +20,3 @@ if __name__ == "__main__":
     window = windowPrin()
     window.show()
     sys.exit(app.exec())
-    pass
