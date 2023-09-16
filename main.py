@@ -10,7 +10,7 @@ class windowPrin(QMainWindow):
         QMainWindow.__init__(self, parent)
         self.ventanaAnchoDeBanda = Ui_MainWindow()
         self.ventanaAnchoDeBanda.setupUi(self)
-        self.stilosDelaAplicacion("darck")
+        self.stilosDelaAplicacion("with")
         self.grupoDeBotones()
 
     def stilosDelaAplicacion(self,typeStile):
