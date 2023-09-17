@@ -1,15 +1,15 @@
 # archibos necesaris
-from GUI.ui_VentanaPrincipal import *
+from GUI.ui_VentanaPrincipal import Ui_MainWindow, QApplication
+from PySide6.QtWidgets import QMainWindow
 # librerias
 import sys
 
 
 # clase principal
-class windowPrin(QMainWindow):
+class windowPrin(QMainWindow,Ui_MainWindow):
     def __init__(self, parent=None):
-        QMainWindow.__init__(self, parent)
-        self.ventanaAnchoDeBanda = Ui_MainWindow()
-        self.ventanaAnchoDeBanda.setupUi(self)
+        super().__init__(parent)
+        self.setupUi(self)
         self.stilosDelaAplicacion("with")
         self.grupoDeBotones()
 
