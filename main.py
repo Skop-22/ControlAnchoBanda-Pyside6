@@ -1,8 +1,8 @@
 from PySide6.QtWidgets import QApplication
 from PySide6.QtCore import QLocale
 # archibos necesaris
-from qfluentwidgets import FluentIcon, SplitTitleBar, setThemeColor, FluentTranslator, SplitFluentWindow 
-from  FunWin.VentanaCasa import windowHome
+from qfluentwidgets import FluentIcon, SplitTitleBar, FluentTranslator, SplitFluentWindow 
+from FunWin.VentanaCasa import windowHome
 # librerias
 import sys
 
