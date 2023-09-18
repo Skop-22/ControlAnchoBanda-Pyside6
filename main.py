@@ -19,6 +19,7 @@ class VentanaPrincipal(SplitFluentWindow):
     def menuDelaAplicacion(self):
         self.windowHome = windowHome()
         self.addSubInterface(self.windowHome,FluentIcon.HOME,"Home")
+        self.resize(1060, 680)
 
 
     def Titulo(self):
