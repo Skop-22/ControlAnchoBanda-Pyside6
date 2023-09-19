@@ -3,6 +3,7 @@ from PySide6.QtCore import QLocale
 # archibos necesaris
 from qfluentwidgets import FluentIcon, SplitTitleBar, FluentTranslator, SplitFluentWindow 
 from FunWin.VentanaCasa import windowHome
+from FunWin.VentanaInfo import Info
 # librerias
 import sys
 
@@ -18,7 +19,9 @@ class VentanaPrincipal(SplitFluentWindow):
 
     def menuDelaAplicacion(self):
         self.windowHome = windowHome()
+        self.informacion = Info()
         self.addSubInterface(self.windowHome,FluentIcon.HOME,"Home")
+        self.addSubInterface(self.informacion,FluentIcon.INFO,"Información")
         self.resize(1060, 680)
 
 
