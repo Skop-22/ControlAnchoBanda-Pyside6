@@ -76,8 +76,11 @@
         <attribute name="horizontalHeaderCascadingSectionResizes">
          <bool>false</bool>
         </attribute>
+        <attribute name="horizontalHeaderMinimumSectionSize">
+         <number>43</number>
+        </attribute>
         <attribute name="horizontalHeaderDefaultSectionSize">
-         <number>130</number>
+         <number>149</number>
         </attribute>
         <attribute name="horizontalHeaderShowSortIndicator" stdset="0">
          <bool>false</bool>
@@ -109,6 +112,11 @@
         <column>
          <property name="text">
           <string>Direccion Mac</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Estado</string>
          </property>
         </column>
        </widget>
