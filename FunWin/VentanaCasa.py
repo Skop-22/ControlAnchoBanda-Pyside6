@@ -12,12 +12,6 @@ class windowHome(QWidget,Ui_Form):
         self.tablaDeDireccionesIP()
 
     def escanerDeRed(self):
-        with IPRoute() as ipr:
-            devices = ipr.get_links()
-            print("Dispositivos de red disponibles:")
-            for device in devices:
-                pass
-                #print(f"Nombre: {device.get_attr('IFLA_IFNAME')}, Tipo: {device.get_attr('IFLA_LINKINFO')}")
         pass
 
     def tablaDeDireccionesIP(self):
