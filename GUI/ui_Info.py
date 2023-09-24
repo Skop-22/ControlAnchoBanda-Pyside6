@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'InfodldvHH.ui'
+## Form generated from reading UI file 'InfoJceyKC.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.4.2
 ##
@@ -29,6 +29,9 @@ class Ui_Informacion(object):
         font.setPointSize(15)
         font.setBold(True)
         self.label.setFont(font)
+        self.widget = QWidget(Informacion)
+        self.widget.setObjectName(u"widget")
+        self.widget.setGeometry(QRect(30, 80, 371, 311))
 
         self.retranslateUi(Informacion)
 
