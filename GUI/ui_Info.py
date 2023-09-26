@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'InfoJceyKC.ui'
+## Form generated from reading UI file 'InfogfqYGE.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.4.2
 ##
@@ -15,7 +15,10 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
     QFont, QFontDatabase, QGradient, QIcon,
     QImage, QKeySequence, QLinearGradient, QPainter,
     QPalette, QPixmap, QRadialGradient, QTransform)
-from PySide6.QtWidgets import (QApplication, QLabel, QSizePolicy, QWidget)
+from PySide6.QtWidgets import (QApplication, QFrame, QLabel, QSizePolicy,
+    QWidget)
+
+from qfluentwidgets import CardWidget
 
 class Ui_Informacion(object):
     def setupUi(self, Informacion):
@@ -29,9 +32,11 @@ class Ui_Informacion(object):
         font.setPointSize(15)
         font.setBold(True)
         self.label.setFont(font)
-        self.widget = QWidget(Informacion)
-        self.widget.setObjectName(u"widget")
-        self.widget.setGeometry(QRect(30, 80, 371, 311))
+        self.frame = CardWidget(Informacion)
+        self.frame.setObjectName(u"frame")
+        self.frame.setGeometry(QRect(20, 80, 241, 261))
+        self.frame.setFrameShape(QFrame.StyledPanel)
+        self.frame.setFrameShadow(QFrame.Raised)
 
         self.retranslateUi(Informacion)
 

@@ -32,17 +32,31 @@
     <string>Información</string>
    </property>
   </widget>
-  <widget class="QWidget" name="widget" native="true">
+  <widget class="CardWidget" name="frame">
    <property name="geometry">
     <rect>
-     <x>30</x>
+     <x>20</x>
      <y>80</y>
-     <width>371</width>
-     <height>311</height>
+     <width>241</width>
+     <height>261</height>
     </rect>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::StyledPanel</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Raised</enum>
    </property>
   </widget>
  </widget>
+ <customwidgets>
+  <customwidget>
+   <class>CardWidget</class>
+   <extends>QFrame</extends>
+   <header location="global">qfluentwidgets</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
  <resources/>
  <connections/>
 </ui>
