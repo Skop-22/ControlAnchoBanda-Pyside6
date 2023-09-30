@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'InfogfqYGE.ui'
+## Form generated from reading UI file 'InfoKgOeta.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.4.2
 ##
@@ -24,7 +24,7 @@ class Ui_Informacion(object):
     def setupUi(self, Informacion):
         if not Informacion.objectName():
             Informacion.setObjectName(u"Informacion")
-        Informacion.resize(709, 473)
+        Informacion.resize(879, 601)
         self.label = QLabel(Informacion)
         self.label.setObjectName(u"label")
         self.label.setGeometry(QRect(20, 40, 161, 31))
@@ -34,7 +34,7 @@ class Ui_Informacion(object):
         self.label.setFont(font)
         self.frame = CardWidget(Informacion)
         self.frame.setObjectName(u"frame")
-        self.frame.setGeometry(QRect(20, 80, 241, 261))
+        self.frame.setGeometry(QRect(20, 80, 531, 441))
         self.frame.setFrameShape(QFrame.StyledPanel)
         self.frame.setFrameShadow(QFrame.Raised)
 
