@@ -34,12 +34,12 @@ class VentanaPrincipal(SplitFluentWindow):
 
     def stilos(self):
         self.resize(1060, 680)
-        #with open("CSS/styles.css") as style:
-        #    self.setStyleSheet(style.read())
+        with open("CSS/styles.css") as style:
+            self.setStyleSheet(style.read())
 
 
 if __name__ == "__main__":
-    #setTheme(Theme.DARK)#tema 
+    setTheme(Theme.DARK)#tema 
     app = QApplication(sys.argv)
     app.installTranslator(FluentTranslator(QLocale()))
     window = VentanaPrincipal()

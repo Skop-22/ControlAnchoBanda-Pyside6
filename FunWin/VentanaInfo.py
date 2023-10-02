@@ -22,9 +22,10 @@ class Info(Ui_Informacion,QWidget):
         self.donuts = []
         self.chart_view = QChartView(self.frame)
         self.chart_view.setRenderHint(QPainter.Antialiasing)
+        self.chart_view.setStyleSheet("background-color: transparent;")
         self.chart = self.chart_view.chart()
+        self.chart.setBackgroundBrush(Qt.transparent)
         self.chart.legend().setVisible(False)
-        self.chart.setTitle("Estado De la Red")
         self.chart.setAnimationOptions(QChart.AllAnimations)
 
         self.min_size = 0.1

@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'VentanaPrin2wxhhUT.ui'
+## Form generated from reading UI file 'VentanaPrin2pSDHBS.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.4.2
 ##
@@ -16,31 +16,24 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
     QImage, QKeySequence, QLinearGradient, QPainter,
     QPalette, QPixmap, QRadialGradient, QTransform)
 from PySide6.QtWidgets import (QApplication, QFrame, QGridLayout, QHeaderView,
-    QLabel, QSizePolicy, QTableWidgetItem, QWidget)
+    QSizePolicy, QTableWidgetItem, QWidget)
 
-from qfluentwidgets import (CardWidget, TableWidget)
+from qfluentwidgets import (CardWidget, TableWidget, TitleLabel)
 
 class Ui_Form(object):
     def setupUi(self, Form):
         if not Form.objectName():
             Form.setObjectName(u"Form")
-        Form.resize(816, 510)
+        Form.resize(889, 510)
+        self.gridLayout_3 = QGridLayout(Form)
+        self.gridLayout_3.setObjectName(u"gridLayout_3")
+        self.gridLayout_3.setContentsMargins(-1, 45, -1, -1)
         self.frame = CardWidget(Form)
         self.frame.setObjectName(u"frame")
-        self.frame.setGeometry(QRect(10, 40, 541, 371))
         self.frame.setFrameShape(QFrame.StyledPanel)
         self.frame.setFrameShadow(QFrame.Raised)
         self.gridLayout = QGridLayout(self.frame)
         self.gridLayout.setObjectName(u"gridLayout")
-        self.label = QLabel(self.frame)
-        self.label.setObjectName(u"label")
-        font = QFont()
-        font.setPointSize(15)
-        font.setBold(True)
-        self.label.setFont(font)
-
-        self.gridLayout.addWidget(self.label, 0, 0, 1, 1)
-
         self.tableWidget = TableWidget(self.frame)
         if (self.tableWidget.columnCount() < 5):
             self.tableWidget.setColumnCount(5)
@@ -57,13 +50,99 @@ class Ui_Form(object):
         self.tableWidget.setObjectName(u"tableWidget")
         self.tableWidget.horizontalHeader().setCascadingSectionResizes(False)
         self.tableWidget.horizontalHeader().setMinimumSectionSize(38)
-        self.tableWidget.horizontalHeader().setDefaultSectionSize(103)
+        self.tableWidget.horizontalHeader().setDefaultSectionSize(125)
         self.tableWidget.horizontalHeader().setProperty("showSortIndicator", False)
         self.tableWidget.horizontalHeader().setStretchLastSection(False)
         self.tableWidget.verticalHeader().setCascadingSectionResizes(False)
         self.tableWidget.verticalHeader().setProperty("showSortIndicator", False)
 
         self.gridLayout.addWidget(self.tableWidget, 1, 0, 1, 1)
+
+        self.label = TitleLabel(self.frame)
+        self.label.setObjectName(u"label")
+
+        self.gridLayout.addWidget(self.label, 0, 0, 1, 1)
+
+
+        self.gridLayout_3.addWidget(self.frame, 0, 0, 1, 1)
+
+        self.widget_3 = QWidget(Form)
+        self.widget_3.setObjectName(u"widget_3")
+        sizePolicy = QSizePolicy(QSizePolicy.Expanding, QSizePolicy.Preferred)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.widget_3.sizePolicy().hasHeightForWidth())
+        self.widget_3.setSizePolicy(sizePolicy)
+        self.gridLayout_2 = QGridLayout(self.widget_3)
+        self.gridLayout_2.setSpacing(25)
+        self.gridLayout_2.setObjectName(u"gridLayout_2")
+        self.gridLayout_2.setContentsMargins(25, 0, 25, 0)
+        self.frame_3 = CardWidget(self.widget_3)
+        self.frame_3.setObjectName(u"frame_3")
+        self.frame_3.setFrameShape(QFrame.StyledPanel)
+        self.frame_3.setFrameShadow(QFrame.Raised)
+        self.gridLayout_4 = QGridLayout(self.frame_3)
+        self.gridLayout_4.setObjectName(u"gridLayout_4")
+        self.gridLayout_4.setVerticalSpacing(0)
+        self.label_2 = TitleLabel(self.frame_3)
+        self.label_2.setObjectName(u"label_2")
+
+        self.gridLayout_4.addWidget(self.label_2, 0, 0, 1, 1, Qt.AlignTop)
+
+        self.widget = QWidget(self.frame_3)
+        self.widget.setObjectName(u"widget")
+        sizePolicy1 = QSizePolicy(QSizePolicy.Preferred, QSizePolicy.Expanding)
+        sizePolicy1.setHorizontalStretch(0)
+        sizePolicy1.setVerticalStretch(0)
+        sizePolicy1.setHeightForWidth(self.widget.sizePolicy().hasHeightForWidth())
+        self.widget.setSizePolicy(sizePolicy1)
+        self.gridLayout_9 = QGridLayout(self.widget)
+        self.gridLayout_9.setSpacing(0)
+        self.gridLayout_9.setObjectName(u"gridLayout_9")
+        self.gridLayout_9.setContentsMargins(0, 0, 0, 0)
+        self.Grafico_De_Los_Dispositivos = QGridLayout()
+        self.Grafico_De_Los_Dispositivos.setObjectName(u"Grafico_De_Los_Dispositivos")
+
+        self.gridLayout_9.addLayout(self.Grafico_De_Los_Dispositivos, 0, 0, 1, 1)
+
+
+        self.gridLayout_4.addWidget(self.widget, 1, 0, 1, 1)
+
+
+        self.gridLayout_2.addWidget(self.frame_3, 0, 0, 1, 1)
+
+        self.frame_4 = CardWidget(self.widget_3)
+        self.frame_4.setObjectName(u"frame_4")
+        self.frame_4.setFrameShape(QFrame.StyledPanel)
+        self.frame_4.setFrameShadow(QFrame.Raised)
+        self.gridLayout_5 = QGridLayout(self.frame_4)
+        self.gridLayout_5.setObjectName(u"gridLayout_5")
+        self.label_3 = TitleLabel(self.frame_4)
+        self.label_3.setObjectName(u"label_3")
+
+        self.gridLayout_5.addWidget(self.label_3, 0, 0, 1, 1, Qt.AlignTop)
+
+        self.widget_2 = QWidget(self.frame_4)
+        self.widget_2.setObjectName(u"widget_2")
+        sizePolicy1.setHeightForWidth(self.widget_2.sizePolicy().hasHeightForWidth())
+        self.widget_2.setSizePolicy(sizePolicy1)
+        self.gridLayout_11 = QGridLayout(self.widget_2)
+        self.gridLayout_11.setSpacing(0)
+        self.gridLayout_11.setObjectName(u"gridLayout_11")
+        self.gridLayout_11.setContentsMargins(0, 0, 0, 0)
+        self.Grafico_De_los_Detalles = QGridLayout()
+        self.Grafico_De_los_Detalles.setObjectName(u"Grafico_De_los_Detalles")
+
+        self.gridLayout_11.addLayout(self.Grafico_De_los_Detalles, 0, 0, 1, 1)
+
+
+        self.gridLayout_5.addWidget(self.widget_2, 1, 0, 1, 1)
+
+
+        self.gridLayout_2.addWidget(self.frame_4, 1, 0, 1, 1)
+
+
+        self.gridLayout_3.addWidget(self.widget_3, 0, 1, 1, 1)
 
 
         self.retranslateUi(Form)
@@ -73,7 +152,6 @@ class Ui_Form(object):
 
     def retranslateUi(self, Form):
         Form.setWindowTitle(QCoreApplication.translate("Form", u"Form", None))
-        self.label.setText(QCoreApplication.translate("Form", u"Dispositivos conectados", None))
         ___qtablewidgetitem = self.tableWidget.horizontalHeaderItem(0)
         ___qtablewidgetitem.setText(QCoreApplication.translate("Form", u"ID", None));
         ___qtablewidgetitem1 = self.tableWidget.horizontalHeaderItem(1)
@@ -84,5 +162,8 @@ class Ui_Form(object):
         ___qtablewidgetitem3.setText(QCoreApplication.translate("Form", u"Direccion Mac", None));
         ___qtablewidgetitem4 = self.tableWidget.horizontalHeaderItem(4)
         ___qtablewidgetitem4.setText(QCoreApplication.translate("Form", u"Estado", None));
+        self.label.setText(QCoreApplication.translate("Form", u"TextLabel", None))
+        self.label_2.setText(QCoreApplication.translate("Form", u"TextLabel", None))
+        self.label_3.setText(QCoreApplication.translate("Form", u"TextLabel", None))
     # retranslateUi
 
