@@ -1,13 +1,4 @@
-# archibos necesaris
-from PySide6 import QtCharts
-from PySide6 import QtGui
-from GUI.ui_VentanaPrin2 import *
-from PySide6.QtCore import QPointF, Qt
-from PySide6.QtCharts import QChart, QChartView, QLineSeries, QAreaSeries
-
-from qfluentwidgets import HorizontalFlipView
-# librerias
-
+from Rutas.ruta import *
 # clase principal
 class windowHome(QWidget,Ui_Form):
 

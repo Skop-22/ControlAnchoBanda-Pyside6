@@ -1,14 +1,4 @@
-from PySide6.QtWidgets import QStyle, QWidget, QGraphicsDropShadowEffect
-
-from PySide6.QtCore import Qt, QTimer, Slot
-from PySide6.QtGui import QPainter
-from PySide6.QtWidgets import QApplication, QGridLayout, QWidget
-from PySide6.QtCharts import QChart, QChartView, QPieSeries, QPieSlice
-
-from random import randrange
-from functools import partial
-
-from GUI.ui_Info import *
+from Rutas.ruta import *
 
 class Info(Ui_Informacion,QWidget):
 
@@ -26,6 +16,7 @@ class Info(Ui_Informacion,QWidget):
         self.chart = self.chart_view.chart()
         self.chart.setBackgroundBrush(Qt.transparent)
         self.chart.legend().setVisible(False)
+        self.chart.setTitle("Estado De la Red")
         self.chart.setAnimationOptions(QChart.AllAnimations)
 
         self.min_size = 0.1

@@ -1,12 +1,4 @@
-from PySide6.QtWidgets import QApplication
-from PySide6.QtCore import QLocale
-# archibos necesaris
-from qfluentwidgets import (FluentIcon, SplitTitleBar, FluentTranslator, SplitFluentWindow,
-                            setTheme, Theme)
-from FunWin.VentanaCasa import windowHome
-from FunWin.VentanaInfo import Info
-# librerias
-import sys
+from Rutas.ruta import *
 
 # clase principal
 class VentanaPrincipal(SplitFluentWindow):
