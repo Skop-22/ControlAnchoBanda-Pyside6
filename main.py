@@ -13,7 +13,7 @@ class VentanaPrincipal(SplitFluentWindow):
     def menuDelaAplicacion(self):
         self.windowHome = windowHome(self)
         self.informacion = Info(self)
-        self.addSubInterface(self.windowHome,FluentIcon.WIFI,"Home")
+        self.addSubInterface(self.windowHome,FluentIcon.WIFI,"Wifi")
         self.addSubInterface(self.informacion,FluentIcon.INFO,"Información")
 
 

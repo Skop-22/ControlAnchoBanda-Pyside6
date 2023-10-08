@@ -5,10 +5,13 @@ class windowHome(QWidget,Ui_Form):
     def __init__(self,parent=None):
         super().__init__(parent=parent)
         self.setupUi(self)
-        self.tablaDeDireccionesIP()
         self.label.setText("Dispositivos")
         self.label_2.setText("Grafica De Dispositivos")
         self.label_3.setText("Grafica Detalles")
+        self.progressBar = IndeterminateProgressBar()
+        self.Progeso.addWidget(self.progressBar)
+        self.progressBar.stop()
+        self.Actualizar.clicked.connect(lambda: self.tablaDeDireccionesIP())
         self.definicionDeGraficos()
 
     def definicionDeGraficos(self):
@@ -46,17 +49,34 @@ class windowHome(QWidget,Ui_Form):
         chart_view.setStyleSheet("background-color: transparent;color: rgb(255,255,255);")
         return chart_view
 
-
     def tablaDeDireccionesIP(self):
+        self.escanerDevice = Escaneo()
+        self.escanerDevice.start()
+        self.progressBar.start()
+
+    def actuali(self,devices):
+        self.progressBar.stop()
         self.tableWidget.setWordWrap(False)
         self.tableWidget.verticalHeader().hide()
-        devices= [['1','alcatel',"192.168.1.1",'00:1A:2B:3C:4D:5E','Conectado']
-                    ,['2','nokia',"192.168.1.2",'D1:22:33:44:55:67','Desconectado']
-                    ,['4','nokia',"192.168.1.4",'D1:22:33:44:55:69','Conectado']]
         self.tableWidget.setRowCount(len(devices))#tamaño en columnas
         self.tableWidget.setColumnCount(len(devices[0]))
 
-        for contador, devices in enumerate(devices):
-            for j in range(len(devices)):
-                #print(f"i = {contador} \n j={j} \n device = {devices[j]}")
-                self.tableWidget.setItem(contador,j,QTableWidgetItem(devices[j]))
+        for contadorEnX, devices in enumerate(devices):
+            for contadorEnY in range(len(devices)):
+                self.tableWidget.setItem(contadorEnX,contadorEnY,QTableWidgetItem(str(devices[contadorEnY])))
+
+
+class Escaneo(threading.Thread):
+    def __init__(self):
+        super().__init__()
+        self.lista = []
+
+    def run(self):
+        contador =0
+        nm = nmap.PortScanner()
+        nm.scan(hosts="192.168.1.0/24", arguments='-T4 -F')
+        for hosts in nm.all_hosts():
+            if hosts != '192.168.1.254':
+                self.lista.insert(contador,[contador+1,nm[hosts].hostname(),hosts,nm[hosts].state()])
+            contador +=1
+        print(self.lista)

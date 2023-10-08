@@ -26,7 +26,21 @@
       <enum>QFrame::Raised</enum>
      </property>
      <layout class="QGridLayout" name="gridLayout">
-      <item row="1" column="0">
+      <item row="1" column="0" alignment="Qt::AlignRight">
+       <widget class="PushButton" name="Actualizar">
+        <property name="text">
+         <string>Actualizar</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="0">
+       <widget class="TitleLabel" name="label">
+        <property name="text">
+         <string>TextLabel</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="0">
        <widget class="TableWidget" name="tableWidget">
         <attribute name="horizontalHeaderCascadingSectionResizes">
          <bool>false</bool>
@@ -66,21 +80,39 @@
         </column>
         <column>
          <property name="text">
-          <string>Direccion Mac</string>
-         </property>
-        </column>
-        <column>
-         <property name="text">
           <string>Estado</string>
          </property>
         </column>
        </widget>
       </item>
-      <item row="0" column="0">
-       <widget class="TitleLabel" name="label">
-        <property name="text">
-         <string>TextLabel</string>
+      <item row="3" column="0">
+       <widget class="QWidget" name="widget_4" native="true">
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>40</height>
+         </size>
         </property>
+        <layout class="QGridLayout" name="gridLayout_7">
+         <property name="leftMargin">
+          <number>0</number>
+         </property>
+         <property name="topMargin">
+          <number>0</number>
+         </property>
+         <property name="rightMargin">
+          <number>0</number>
+         </property>
+         <property name="bottomMargin">
+          <number>0</number>
+         </property>
+         <property name="spacing">
+          <number>0</number>
+         </property>
+         <item row="0" column="0">
+          <layout class="QGridLayout" name="Progeso"/>
+         </item>
+        </layout>
        </widget>
       </item>
      </layout>
@@ -119,8 +151,20 @@
          <enum>QFrame::Raised</enum>
         </property>
         <layout class="QGridLayout" name="gridLayout_4">
-         <property name="verticalSpacing">
-          <number>0</number>
+         <property name="leftMargin">
+          <number>4</number>
+         </property>
+         <property name="topMargin">
+          <number>4</number>
+         </property>
+         <property name="rightMargin">
+          <number>4</number>
+         </property>
+         <property name="bottomMargin">
+          <number>4</number>
+         </property>
+         <property name="spacing">
+          <number>4</number>
          </property>
          <item row="0" column="0" alignment="Qt::AlignTop">
           <widget class="TitleLabel" name="label_2">
@@ -171,6 +215,21 @@
          <enum>QFrame::Raised</enum>
         </property>
         <layout class="QGridLayout" name="gridLayout_5">
+         <property name="leftMargin">
+          <number>4</number>
+         </property>
+         <property name="topMargin">
+          <number>4</number>
+         </property>
+         <property name="rightMargin">
+          <number>4</number>
+         </property>
+         <property name="bottomMargin">
+          <number>4</number>
+         </property>
+         <property name="spacing">
+          <number>4</number>
+         </property>
          <item row="0" column="0" alignment="Qt::AlignTop">
           <widget class="TitleLabel" name="label_3">
            <property name="text">
@@ -231,6 +290,11 @@
   <customwidget>
    <class>TitleLabel</class>
    <extends>QLabel</extends>
+   <header location="global">qfluentwidgets</header>
+  </customwidget>
+  <customwidget>
+   <class>PushButton</class>
+   <extends>QPushButton</extends>
    <header location="global">qfluentwidgets</header>
   </customwidget>
  </customwidgets>

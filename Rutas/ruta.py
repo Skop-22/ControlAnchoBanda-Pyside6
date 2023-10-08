@@ -6,7 +6,8 @@ from PySide6.QtWidgets import (
                             QWidget, 
                             QGraphicsDropShadowEffect, 
                             QGridLayout, 
-                            QWidget)
+                            QWidget, 
+                            QVBoxLayout)
 
 from PySide6.QtCharts import (
                             QChart, 
@@ -21,16 +22,28 @@ from PySide6.QtCore import (
                             QPointF, 
                             Qt, 
                             QTimer, 
-                            Slot)
+                            Slot, 
+                            Signal, 
+                            QObject)
 
 from PySide6 import QtCharts,QtGui
 
 #archibos necesaris de qfluentwidgets para la nueva version
 
-from qfluentwidgets import (FluentIcon, SplitTitleBar, FluentTranslator, SplitFluentWindow,
-                            setTheme, Theme, HorizontalFlipView)
+from qfluentwidgets import (
+                            FluentIcon, 
+                            SplitTitleBar, 
+                            FluentTranslator, 
+                            SplitFluentWindow,
+                            setTheme, 
+                            Theme, 
+                            HorizontalFlipView,
+                            IndeterminateProgressBar, 
+                            ProgressBar)
 from random import randrange
 from functools import partial
+import nmap
+import threading
 import sys
 
 #archivos para la venta 

@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'VentanaPrin2pSDHBS.ui'
+## Form generated from reading UI file 'VentanaPrin2ReNsIo.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.4.2
 ##
@@ -18,7 +18,7 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
 from PySide6.QtWidgets import (QApplication, QFrame, QGridLayout, QHeaderView,
     QSizePolicy, QTableWidgetItem, QWidget)
 
-from qfluentwidgets import (CardWidget, TableWidget, TitleLabel)
+from qfluentwidgets import (CardWidget, PushButton, TableWidget, TitleLabel)
 
 class Ui_Form(object):
     def setupUi(self, Form):
@@ -34,9 +34,19 @@ class Ui_Form(object):
         self.frame.setFrameShadow(QFrame.Raised)
         self.gridLayout = QGridLayout(self.frame)
         self.gridLayout.setObjectName(u"gridLayout")
+        self.Actualizar = PushButton(self.frame)
+        self.Actualizar.setObjectName(u"Actualizar")
+
+        self.gridLayout.addWidget(self.Actualizar, 1, 0, 1, 1, Qt.AlignRight)
+
+        self.label = TitleLabel(self.frame)
+        self.label.setObjectName(u"label")
+
+        self.gridLayout.addWidget(self.label, 0, 0, 1, 1)
+
         self.tableWidget = TableWidget(self.frame)
-        if (self.tableWidget.columnCount() < 5):
-            self.tableWidget.setColumnCount(5)
+        if (self.tableWidget.columnCount() < 4):
+            self.tableWidget.setColumnCount(4)
         __qtablewidgetitem = QTableWidgetItem()
         self.tableWidget.setHorizontalHeaderItem(0, __qtablewidgetitem)
         __qtablewidgetitem1 = QTableWidgetItem()
@@ -45,8 +55,6 @@ class Ui_Form(object):
         self.tableWidget.setHorizontalHeaderItem(2, __qtablewidgetitem2)
         __qtablewidgetitem3 = QTableWidgetItem()
         self.tableWidget.setHorizontalHeaderItem(3, __qtablewidgetitem3)
-        __qtablewidgetitem4 = QTableWidgetItem()
-        self.tableWidget.setHorizontalHeaderItem(4, __qtablewidgetitem4)
         self.tableWidget.setObjectName(u"tableWidget")
         self.tableWidget.horizontalHeader().setCascadingSectionResizes(False)
         self.tableWidget.horizontalHeader().setMinimumSectionSize(38)
@@ -56,12 +64,22 @@ class Ui_Form(object):
         self.tableWidget.verticalHeader().setCascadingSectionResizes(False)
         self.tableWidget.verticalHeader().setProperty("showSortIndicator", False)
 
-        self.gridLayout.addWidget(self.tableWidget, 1, 0, 1, 1)
+        self.gridLayout.addWidget(self.tableWidget, 2, 0, 1, 1)
 
-        self.label = TitleLabel(self.frame)
-        self.label.setObjectName(u"label")
+        self.widget_4 = QWidget(self.frame)
+        self.widget_4.setObjectName(u"widget_4")
+        self.widget_4.setMinimumSize(QSize(0, 40))
+        self.gridLayout_7 = QGridLayout(self.widget_4)
+        self.gridLayout_7.setSpacing(0)
+        self.gridLayout_7.setObjectName(u"gridLayout_7")
+        self.gridLayout_7.setContentsMargins(0, 0, 0, 0)
+        self.Progeso = QGridLayout()
+        self.Progeso.setObjectName(u"Progeso")
 
-        self.gridLayout.addWidget(self.label, 0, 0, 1, 1)
+        self.gridLayout_7.addLayout(self.Progeso, 0, 0, 1, 1)
+
+
+        self.gridLayout.addWidget(self.widget_4, 3, 0, 1, 1)
 
 
         self.gridLayout_3.addWidget(self.frame, 0, 0, 1, 1)
@@ -82,8 +100,9 @@ class Ui_Form(object):
         self.frame_3.setFrameShape(QFrame.StyledPanel)
         self.frame_3.setFrameShadow(QFrame.Raised)
         self.gridLayout_4 = QGridLayout(self.frame_3)
+        self.gridLayout_4.setSpacing(4)
         self.gridLayout_4.setObjectName(u"gridLayout_4")
-        self.gridLayout_4.setVerticalSpacing(0)
+        self.gridLayout_4.setContentsMargins(4, 4, 4, 4)
         self.label_2 = TitleLabel(self.frame_3)
         self.label_2.setObjectName(u"label_2")
 
@@ -116,7 +135,9 @@ class Ui_Form(object):
         self.frame_4.setFrameShape(QFrame.StyledPanel)
         self.frame_4.setFrameShadow(QFrame.Raised)
         self.gridLayout_5 = QGridLayout(self.frame_4)
+        self.gridLayout_5.setSpacing(4)
         self.gridLayout_5.setObjectName(u"gridLayout_5")
+        self.gridLayout_5.setContentsMargins(4, 4, 4, 4)
         self.label_3 = TitleLabel(self.frame_4)
         self.label_3.setObjectName(u"label_3")
 
@@ -152,6 +173,8 @@ class Ui_Form(object):
 
     def retranslateUi(self, Form):
         Form.setWindowTitle(QCoreApplication.translate("Form", u"Form", None))
+        self.Actualizar.setText(QCoreApplication.translate("Form", u"Actualizar", None))
+        self.label.setText(QCoreApplication.translate("Form", u"TextLabel", None))
         ___qtablewidgetitem = self.tableWidget.horizontalHeaderItem(0)
         ___qtablewidgetitem.setText(QCoreApplication.translate("Form", u"ID", None));
         ___qtablewidgetitem1 = self.tableWidget.horizontalHeaderItem(1)
@@ -159,10 +182,7 @@ class Ui_Form(object):
         ___qtablewidgetitem2 = self.tableWidget.horizontalHeaderItem(2)
         ___qtablewidgetitem2.setText(QCoreApplication.translate("Form", u"Direccion IP", None));
         ___qtablewidgetitem3 = self.tableWidget.horizontalHeaderItem(3)
-        ___qtablewidgetitem3.setText(QCoreApplication.translate("Form", u"Direccion Mac", None));
-        ___qtablewidgetitem4 = self.tableWidget.horizontalHeaderItem(4)
-        ___qtablewidgetitem4.setText(QCoreApplication.translate("Form", u"Estado", None));
-        self.label.setText(QCoreApplication.translate("Form", u"TextLabel", None))
+        ___qtablewidgetitem3.setText(QCoreApplication.translate("Form", u"Estado", None));
         self.label_2.setText(QCoreApplication.translate("Form", u"TextLabel", None))
         self.label_3.setText(QCoreApplication.translate("Form", u"TextLabel", None))
     # retranslateUi
