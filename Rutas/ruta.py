@@ -35,12 +35,12 @@ from qfluentwidgets import (
                             SplitTitleBar, 
                             FluentTranslator, 
                             SplitFluentWindow,
-                            setTheme, 
-                            Theme, 
+                            setTheme, Theme, 
                             HorizontalFlipView,
                             IndeterminateProgressBar, 
                             ProgressBar,
                             InfoBar, InfoBarIcon,InfoBarPosition)
+
 from random import randrange
 from functools import partial
 import nmap
