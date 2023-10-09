@@ -19,7 +19,6 @@ class windowHome(QWidget,Ui_Form):
         arregloDetalles =[[1,500],[2,400],[3,50],[4,300]]
         self.Grafico_De_Los_Dispositivos.addWidget(self.graficoTipoLineal(arregloDisositivos,'Dias','Dispositivos'))
         self.Grafico_De_los_Detalles.addWidget(self.graficoTipoLineal(arregloDetalles,'Dias','Conexion'))
-        pass
 
     def graficoTipoLineal(self,arreglo,tituloX,tituloY):
         chart = QtCharts.QChart()
@@ -53,6 +52,23 @@ class windowHome(QWidget,Ui_Form):
         self.escanerDevice = Escaneo()
         self.escanerDevice.start()
         self.progressBar.start()
+        self.createInfoInfoBar("Actualización de los Dispositivos", 'Los dispositivos se estan actualizando porfavor espere')
+        if self.escanerDevice.lista != []:
+            self.actuali(self.escanerDevice.lista)
+
+    def createInfoInfoBar(self,Titulo,Contenido):
+        content = Contenido 
+        w = InfoBar(
+            icon=FluentIcon.SPEED_OFF,
+            title=Titulo,
+            content=content,
+            orient=Qt.Vertical,    # vertical layout
+            isClosable=False,
+            position=InfoBarPosition.TOP_RIGHT,
+            duration=2000,
+            parent=self
+        )
+        w.show()
 
     def actuali(self,devices):
         self.progressBar.stop()
@@ -64,7 +80,6 @@ class windowHome(QWidget,Ui_Form):
         for contadorEnX, devices in enumerate(devices):
             for contadorEnY in range(len(devices)):
                 self.tableWidget.setItem(contadorEnX,contadorEnY,QTableWidgetItem(str(devices[contadorEnY])))
-
 
 class Escaneo(threading.Thread):
     def __init__(self):

@@ -1,4 +1,4 @@
-#proyectos de Pyside6
+#librerias de Pyside6
 from PySide6.QtGui import QPainter
 from PySide6.QtWidgets import (
                             QApplication,
@@ -39,7 +39,8 @@ from qfluentwidgets import (
                             Theme, 
                             HorizontalFlipView,
                             IndeterminateProgressBar, 
-                            ProgressBar)
+                            ProgressBar,
+                            InfoBar, InfoBarIcon,InfoBarPosition)
 from random import randrange
 from functools import partial
 import nmap
