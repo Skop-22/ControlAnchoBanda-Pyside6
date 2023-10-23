@@ -12,6 +12,7 @@ class windowHome(QWidget,Ui_Form):
         self.Progeso.addWidget(self.progressBar)
         self.progressBar.stop()
         self.Actualizar.clicked.connect(lambda: self.tablaDeDireccionesIP())
+
         self.definicionDeGraficos()
 
     def definicionDeGraficos(self):
@@ -49,12 +50,14 @@ class windowHome(QWidget,Ui_Form):
         return chart_view
 
     def tablaDeDireccionesIP(self):
+        self.Actualizar.setEnabled(False)
         self.escanerDevice = Escaneo()
         self.escanerDevice.start()
         self.progressBar.start()
         self.createInfoInfoBar("Actualización de los Dispositivos", 'Los dispositivos se estan actualizando porfavor espere')
-        if self.escanerDevice.lista != []:
-            self.actuali(self.escanerDevice.lista)
+        self.dataIP = Escaneo()
+        self.dataIP.signal.connect(self.actuali)
+        self.dataIP.start()
 
     def createInfoInfoBar(self,Titulo,Contenido):
         content = Contenido 
@@ -71,6 +74,7 @@ class windowHome(QWidget,Ui_Form):
         w.show()
 
     def actuali(self,devices):
+        self.Actualizar.setEnabled(True)
         self.progressBar.stop()
         self.tableWidget.setWordWrap(False)
         self.tableWidget.verticalHeader().hide()
@@ -81,9 +85,11 @@ class windowHome(QWidget,Ui_Form):
             for contadorEnY in range(len(devices)):
                 self.tableWidget.setItem(contadorEnX,contadorEnY,QTableWidgetItem(str(devices[contadorEnY])))
 
-class Escaneo(threading.Thread):
+class Escaneo(QObject,threading.Thread):
+    signal = Signal(list)
     def __init__(self):
-        super().__init__()
+        threading.Thread.__init__(self)  # Llamar a __init__ de threading.Thread
+        QObject.__init__(self)  # Llamar a __init__ de QObject
         self.lista = []
 
     def run(self):
@@ -94,4 +100,4 @@ class Escaneo(threading.Thread):
             if hosts != '192.168.1.254':
                 self.lista.insert(contador,[contador+1,nm[hosts].hostname(),hosts,nm[hosts].state()])
             contador +=1
-        print(self.lista)
+        self.signal.emit(self.lista)

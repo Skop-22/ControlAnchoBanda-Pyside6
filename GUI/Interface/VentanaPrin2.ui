@@ -33,14 +33,7 @@
         </property>
        </widget>
       </item>
-      <item row="0" column="0">
-       <widget class="TitleLabel" name="label">
-        <property name="text">
-         <string>TextLabel</string>
-        </property>
-       </widget>
-      </item>
-      <item row="2" column="0">
+      <item row="3" column="0">
        <widget class="TableWidget" name="tableWidget">
         <attribute name="horizontalHeaderCascadingSectionResizes">
          <bool>false</bool>
@@ -85,12 +78,19 @@
         </column>
        </widget>
       </item>
-      <item row="3" column="0">
+      <item row="0" column="0">
+       <widget class="TitleLabel" name="label">
+        <property name="text">
+         <string>TextLabel</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="0">
        <widget class="QWidget" name="widget_4" native="true">
         <property name="minimumSize">
          <size>
           <width>0</width>
-          <height>40</height>
+          <height>21</height>
          </size>
         </property>
         <layout class="QGridLayout" name="gridLayout_7">
