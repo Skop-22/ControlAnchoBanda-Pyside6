@@ -6,6 +6,7 @@ class VentanaPrincipal(SplitFluentWindow):
     def __init__(self,parent=None):
         super().__init__(parent)
         #titulo de la ventana
+        self.resize(1060, 680)
         self.tituloVentana()
         self.stilos()
         self.menuDelaAplicacion()
@@ -25,7 +26,6 @@ class VentanaPrincipal(SplitFluentWindow):
         self.windowEffect.setMicaEffect(self.winId())
 
     def stilos(self):
-        self.resize(1060, 680)
         with open("CSS/styles.css") as style:
             self.setStyleSheet(style.read())
 

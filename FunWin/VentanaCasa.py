@@ -12,7 +12,6 @@ class windowHome(QWidget,Ui_Form):
         self.Progeso.addWidget(self.progressBar)
         self.progressBar.stop()
         self.Actualizar.clicked.connect(lambda: self.tablaDeDireccionesIP())
-
         self.definicionDeGraficos()
 
     def definicionDeGraficos(self):
@@ -54,7 +53,7 @@ class windowHome(QWidget,Ui_Form):
         self.escanerDevice = Escaneo()
         self.escanerDevice.start()
         self.progressBar.start()
-        self.createInfoInfoBar("Actualización de los Dispositivos", 'Los dispositivos se estan actualizando porfavor espere')
+        self.createInfoInfoBar("Actualización de los Dispositivos", 'Los dispositivos se estan escaneando por favor espere')
         self.dataIP = Escaneo()
         self.dataIP.signal.connect(self.actuali)
         self.dataIP.start()
@@ -68,7 +67,7 @@ class windowHome(QWidget,Ui_Form):
             orient=Qt.Vertical,    # vertical layout
             isClosable=False,
             position=InfoBarPosition.TOP_RIGHT,
-            duration=2000,
+            duration=5000,
             parent=self
         )
         w.show()
