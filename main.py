@@ -2,7 +2,6 @@ from Rutas.ruta import *
 
 # clase principal
 class VentanaPrincipal(SplitFluentWindow):
-
     def __init__(self,parent=None):
         super().__init__(parent)
         #titulo de la ventana
@@ -16,7 +15,6 @@ class VentanaPrincipal(SplitFluentWindow):
         self.informacion = Info(self)
         self.addSubInterface(self.windowHome,FluentIcon.WIFI,"Wifi")
         self.addSubInterface(self.informacion,FluentIcon.INFO,"Información")
-
 
     def tituloVentana(self):
         # change title bar
