@@ -2,7 +2,6 @@ from Rutas.ruta import *
 
 # clase principal
 class VentanaPrincipal(SplitFluentWindow):
-
     def __init__(self,parent=None):
         super().__init__(parent)
         #titulo de la ventana
